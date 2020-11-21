@@ -1,5 +1,5 @@
-const FOOD_DATA = [
-    {
+const FOOD_DATA = {
+    hats: {
       id: 1,
       title: 'Punjabi',
       routeName: 'punjabi',
@@ -60,7 +60,7 @@ const FOOD_DATA = [
         }
       ]
     },
-    {
+    chinese: {
       id: 2,
       title: 'Chinese',
       routeName: 'chinese',
@@ -103,15 +103,15 @@ const FOOD_DATA = [
         }
        ]
     },
-    {
+    southindian: {
       id: 3,
       title: 'South-Indian',
-      routeName: 'south-indian',
+      routeName: 'southindian',
       items: [
         {
           id: 16,
           name: 'Paper Dosa',
-          imageUrl: 'http://www.wallpaperspick.com/wp-content/uploads/2015/07/Dosa-HD-Wallpaper-01387-540x338.jpg',
+          imageUrl: 'https://www.mayuracuisines.com/v1/wp-content/uploads/2017/06/ghee-roast-585x390.jpg',
           price: 120
         },
         {
@@ -140,7 +140,7 @@ const FOOD_DATA = [
         }
       ]
     },
-    {
+    gujarati: {
       id: 4,
       title: 'Gujarati',
       routeName: 'gujarati',
@@ -189,10 +189,10 @@ const FOOD_DATA = [
         }
       ]
     },
-    {
+    fastfood: {
       id: 5,
       title: 'Fast-food',
-      routeName: 'fast-food',
+      routeName: 'fastfood',
       items: [
         {
           id: 28,
@@ -232,6 +232,6 @@ const FOOD_DATA = [
         }
       ]
     }
-  ]
+}
   
   export default FOOD_DATA
