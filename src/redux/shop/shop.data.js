@@ -1,5 +1,5 @@
 const FOOD_DATA = {
-    hats: {
+    punjabi: {
       id: 1,
       title: 'Punjabi',
       routeName: 'punjabi',
