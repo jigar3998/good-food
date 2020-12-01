@@ -13,6 +13,9 @@ const config = {
     measurementId: "G-4MSNE70ZRE"
 };
 
+
+firebase.initializeApp(config)
+
 export const createUserProfileDocument = async(userAuth,additionalData)=>{
     if(!userAuth) return
 
@@ -37,8 +40,23 @@ export const createUserProfileDocument = async(userAuth,additionalData)=>{
     return userRef
 }
 
-firebase.initializeApp(config)
+export const convertCollectionsSnapshotToMap = (collections) => {
+    const transformedCollection = collections.docs.map( doc =>{
+        const {title, items} =  doc.data()
 
+        return {
+            routeName: encodeURI(title.toLowerCase()),
+            id: doc.id,
+            title,
+            items
+        }
+    })
+
+    return transformedCollection.reduce((accumulator,collection)=> {
+        accumulator[collection.title.toLowerCase()] = collection
+        return accumulator
+    }, {})
+}
 
 
 export const auth = firebase.auth()
